@@ -5,7 +5,7 @@ app.get('/',(req,res)=>{
     res.send('Welcome to the home page!');
 })
 
-const PORT = 3000;
-app.listen(PORT,()=>{
+const port = process.env.port || 3000;
+app.listen(port,()=>{
     console.log(`Sever open on port ${PORT}`);
 })
